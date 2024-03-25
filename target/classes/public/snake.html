@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="optic.css">
+  <script src="stomp.js"></script>
+  <title>Snake Game of MW</title>
+</head>
+
+<body>
+<div id="control-button">
+  <div class="controlB">
+    <div class="centeredB" onClick=getMobilePosition("o")>
+      o
+    </div>
+  </div>
+
+  <div class="controlB overwrite">
+    <div onClick=getMobilePosition("l")>
+      l
+    </div>
+    <div onClick=getMobilePosition("r")>
+      r
+    </div>
+  </div>
+
+  <div class="controlB">
+    <div class="centeredB" onClick=getMobilePosition("u")>
+      u
+    </div>
+  </div>
+</div>
+<main>
+  <div id="chat" class="chat" hidden="true">
+    <h2>
+      <div class="chatHeader">
+        Chat bzw. Console:
+      </div>
+    </h2>
+
+    <!-- <textarea name="chat" id="chatWindow" data-adaptheight rows="3" cols="40"
+    placeholder="deine diskriminierende Nachricht..." style="padding: 16px;
+    line-height: 1.5; width: 50%; " autofocus></textarea> -->
+
+    <span id="messages"> keine Nachrichten</span>
+    <form onsubmit="newMessage(); return false;">
+      <input placeholder="be nice to each other..."
+             style="width: 100%;"
+             type="text" name="" id="chatWindow">
+    </form>
+  </div>
+
+
+  <div class="mainGame">
+
+    <div class="score">
+      <h1>Scores:</h1>
+      <span id="spanId"> ERROR nothing Avaible</span>
+    </div>
+
+    <br/>
+
+    <canvas width="1000" height="600" id="canvas"></canvas>
+
+    <br/>
+
+    <div class="footer">
+      <button onclick=showChat()>Show Chat</button>
+      <div>
+        Highscore:
+        <span id="highScore"> ERROR nothing Avaible</span> <br>
+
+        <a href="index.html"> Kommentarseite</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="snake.js" type="application/javascript"></script>
+</body>
+</html>
