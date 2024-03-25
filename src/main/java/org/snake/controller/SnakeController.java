@@ -1,6 +1,7 @@
 package org.snake.controller;
 
 import org.apache.commons.lang3.BooleanUtils;
+import org.snake.compiler.GeneratedClass;
 import org.snake.model.FieldData;
 import org.snake.model.Player;
 import org.snake.model.SnakeFodder;
@@ -216,13 +217,12 @@ public class SnakeController {
 
                     break;
                 case "l":
-                    snakeModels.get(i).addPosX(-sizeOfBox);
-                    snakeModels.get(i).addPosY(0);
+                   GeneratedClass.left(snakeModels.get(i), sizeOfBox);
 
                     break;
                 case "r":
-                    snakeModels.get(i).addPosX(sizeOfBox);
-                    snakeModels.get(i).addPosY(0);
+                    GeneratedClass.right(snakeModels.get(i), sizeOfBox);
+
                     break;
             }
 
